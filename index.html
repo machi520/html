@@ -1,0 +1,48 @@
+<!-- html5対応であることを明記 -->
+<!DOCTYPE html>
+<!-- 言語は日本語 -->
+<html lang="ja">
+<head>
+    <!-- htmlのファイルエンコートはUTF-8 -->
+    <meta charset="UTF-8">
+    <!-- モバイル用の設定
+    ちなみに、様々な画面サイズでの表示を確認するにはchromeならF12で画面サイズボタンを押す -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Study</title>
+    <!-- cssファイルの読み込み -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- レスポンシブwebサイトにしたいので、ページ構成はシンプルに1段落にしておく。
+        それならiPad（タブレット）の大きさ以上ならコンテンツを横並びにしたり、増やしたり柔軟に対応できるので、
+        モバイル用とパソコン用など複数のwebサイトを別に用意しなくて済む。 -->
+
+    <!-- コンテンツはブロックごとに<section>タブで囲い、コンテンツのまとまりであることを明示。
+        その際は例えばclass=contentなどでクラス名を指定し、ブロックを区分してCSSでデザインしやすいようにする。
+        トップページのコンテンツは案がなければ以下をベースに。
+        ヘッダー・フッター・メインで分ける。
+        メインは4つのセクション。
+        1つ目はヒーローイメージ。あとは概要を3つ（アイコンとテキスト、画像とテキスト、テキストと画像（逆位置）。 -->
+    
+    <!-- 各セクションの内側は、視覚的な調整のため特別は意味を持たない<div>タグで囲い、配置や横幅の調整に使う。
+        divタグのクラスは例えばclass=container～など。 -->
+        <!-- <section class="content">
+            <div class="container">
+            </div>
+        </section> -->
+
+    <!-- ヒーローイメージ（ヘッダー画像）にはロゴ画像、サイト名、キャッチコピー、リンクボタンを重ねてレイアウト。
+        小さい画面では画面サイズに合わせて文字サイズを変更、大きい画面では文字サイズは固定（画像の大きさはどっちも可変）。
+        breakpointはiPadの横幅である768pxにしておく。 -->
+        
+    <section class="content-a">
+        <div class="container-a">
+            <img src="image/hogehoge.svg" alt="">
+            <h1>HOGEHOGE</h1>
+            <p>happy hogehoge</p>
+            <a href="">hogehoge start</a>
+        </div>
+    </section>
+
+</body>
+</html>
